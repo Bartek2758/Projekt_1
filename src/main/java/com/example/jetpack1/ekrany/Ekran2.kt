@@ -23,10 +23,10 @@ fun Ekran2(
     onBackClick: () -> Unit,
     onNextClick: () -> Unit
 ) {
-    // 1. Stan do przechowywania tylko wpisanego imienia
+
     var nameInput by remember { mutableStateOf("") }
 
-    // 2. Odbiór danych z Firestore w czasie rzeczywistym
+
     val notesState by getNotesFlow().collectAsState(initial = emptyList())
 
     Column(
@@ -72,14 +72,12 @@ fun Ekran2(
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // --- ⬇️ WYŚWIETLANIE MINIMALNEJ LISTY DANYCH ⬇️ ---
 
-        // **Usunięto nagłówek "Lista obecnych imion w bazie danych"**
 
-        // Lista do wyświetlania TYLKO imion
+
         LazyColumn(modifier = Modifier.weight(1f)) {
             items(notesState) { note ->
-                // Wyświetlamy tylko sam tekst, bez kropki, bez Dividera
+
                 Text(
                     text = note.title,
                     style = MaterialTheme.typography.bodyLarge,
@@ -88,7 +86,7 @@ fun Ekran2(
             }
         }
 
-        // --- ⬇️ PRZYCISKI NAWIGACYJNE ⬇️ ---
+
 
         Spacer(modifier = Modifier.height(16.dp))
 

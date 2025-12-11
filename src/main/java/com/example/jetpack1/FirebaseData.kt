@@ -38,7 +38,7 @@ fun sendNote(noteTitle: String, noteContent: String) {
         }
 }
 
-// DANE W CZASIE RZECZYWISTYM
+
 fun getNotesFlow() = callbackFlow<List<Note>> {
 
     val listenerRegistration = db.collection("network_transfer_notes")
@@ -46,7 +46,7 @@ fun getNotesFlow() = callbackFlow<List<Note>> {
         .addSnapshotListener { snapshot, e ->
 
             if (e != null) {
-                Log.w(TAG, "Błąd nasłuchu danych: ", e)
+                Log.w(TAG, "Błąd danych: ", e)
                 trySend(emptyList()) // ⬅️ Działa po dodaniu importu kotlinx.coroutines.channels.awaitClose
                 close(e) // if bład
                 return@addSnapshotListener
@@ -56,7 +56,7 @@ fun getNotesFlow() = callbackFlow<List<Note>> {
                 val notes = snapshot.documents.mapNotNull { document ->
                     document.toObject(Note::class.java)
                 }
-                trySend(notes) // ⬅️ Wysyłanie danych do UI
+                trySend(notes) //
             }
         }
 
