@@ -15,7 +15,7 @@ fun Ekran1(
     onNextClick: () -> Unit
 ) {
 
-    //Wywołuje funkcję tylko raz, gdy ekran jest ładowany
+
     LaunchedEffect(Unit) {
         sendNote("Ekran 1", "Transfer danych z Ekranu 1 - Test.")
     }

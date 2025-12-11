@@ -7,7 +7,7 @@ import com.google.firebase.firestore.firestore
 // ⬅️ KLUCZOWE IMPORTY DO NAPRAWY BŁĘDÓW awaitClose i trySend
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
-// -----------------------------------------------------------------
+
 
 
 data class Note(
