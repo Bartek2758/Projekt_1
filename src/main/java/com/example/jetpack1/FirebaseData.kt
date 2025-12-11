@@ -16,7 +16,7 @@ data class Note(
     val timestamp: Long = System.currentTimeMillis()
 )
 
-// Bazy danych
+
 val db = Firebase.firestore
 const val TAG = "FIREBASE_TRANSFER"
 

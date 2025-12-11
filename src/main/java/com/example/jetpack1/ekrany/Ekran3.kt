@@ -25,6 +25,7 @@ fun Ekran3(
             style = MaterialTheme.typography.headlineMedium
         )
 
+
         Spacer(modifier = Modifier.height(24.dp))
 
         Button(onClick = onBackClick) {

@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 // ⬅️ Importy z Twojego pliku FirebaseData.kt
 import com.example.jetpack1.sendNote
 import com.example.jetpack1.getNotesFlow
-/
+
 @Composable
 fun Ekran2(
     onBackClick: () -> Unit,
