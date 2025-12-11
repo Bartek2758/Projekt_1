@@ -42,7 +42,7 @@ fun Ekran2(
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // --- ⬇️ FORMULARZ WYSYŁANIA DANYCH ⬇️ ---
+
 
         OutlinedTextField(
             value = nameInput,
@@ -53,7 +53,7 @@ fun Ekran2(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Przycisk WYSYŁANIA
+
         Button(
             onClick = {
                 if (nameInput.isNotBlank()) {
